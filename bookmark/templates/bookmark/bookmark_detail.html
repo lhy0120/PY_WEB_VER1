@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail_view</title>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <style>
+        span{
+            font-size: 64px;
+            color: firebrick;
+        }
+        *{
+           font-family: 'Noto Sans KR', sans-serif;
+        }
+        ul{
+            display: inline-block;
+            list-style: none;
+        }
+        li{
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: darkslategray;
+            padding: 10px 2px;
+        }
+        a:hover{
+            background-color: dimgray;
+            color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <h1>{{ object.title }}</h1>
+    <ul>
+        <li> URL : {{ object.url }}</li>
+        <li>CREATE_DATE : {{ object.create_date }}</li>
+        <li>MODIFY_DATE : {{ object.modify_date }}</li>
+    </ul>
+
+    <iframe src='{{ object.url }}'></iframe>
+</div>
+</body>
+</html>

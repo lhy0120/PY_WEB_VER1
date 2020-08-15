@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <style>
+        span{
+            font-size: 64px;
+            color: firebrick;
+        }
+        *{
+           font-family: 'Noto Sans KR', sans-serif;
+        }
+        ul{
+            display: inline-block;
+            list-style: none;
+        }
+        li{
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: darkslategray;
+            padding: 10px 2px;
+        }
+        a:hover{
+            background-color: dimgray;
+            color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+<div id = 'content'>
+    <h1><span>최</span>고로 <span>애</span>정하는 <span>유</span>튜브 영상</h1>
+    <ul>
+        {% for bookmark in object_list %}
+
+        <li><a href="{% url 'detail' bookmark.id %}">{{bookmark}}</a></li>
+
+        {% endfor %}
+
+    </ul>
+</div>
+</body>
+</html>
